@@ -29,6 +29,8 @@ for letter in alphabet:
       combo = letter + letter2 + letter3
       three_letter_combos.append(combo)
 
+# words originally from here: https://raw.githubusercontent.com/dwyl/english-words/master/words_alpha.txt
+
 fileObject = open("words.txt", "r")
 data = fileObject.read()
 words = data.split('\n')
@@ -44,18 +46,19 @@ for word in words:
     else:
       freq[letter] = 1
   
-  # make sure the dict is ordered alphabetically, bc then the strings/keys will be equatable 
+  # Make sure the dict is ordered alphabetically, bc then the strings/keys will be equatable 
   freq = collections.OrderedDict(sorted(freq.items()))
 
   key = str(freq)
+
   #check if that frequency exists in the map
 
   if key in all_words_frequencies:
     all_words_frequencies[key].append(word)
     
-  else:  # add it to the word frequency map
+  else:
     list_of_words = word.split('\n')
-    all_words_frequencies[key] =  list_of_words # just add the word in a list
+    all_words_frequencies[key] =  list_of_words
 
 
 with open('frequency_dict.pickle', 'wb') as handle:
