@@ -26,7 +26,7 @@ for letter in alphabet:
 
 
 all_words_frequencies ={}
-with open('filename.pickle', 'rb') as handle:
+with open('frequency_dict.pickle', 'rb') as handle:
     all_words_frequencies = pickle.load(handle)
 
 

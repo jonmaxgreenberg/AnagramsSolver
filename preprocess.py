@@ -58,6 +58,6 @@ for word in words:
     all_words_frequencies[key] =  list_of_words # just add the word in a list
 
 
-with open('filename.pickle', 'wb') as handle:
+with open('frequency_dict.pickle', 'wb') as handle:
     pickle.dump(all_words_frequencies, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
