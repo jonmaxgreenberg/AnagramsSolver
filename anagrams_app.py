@@ -1,4 +1,5 @@
 from flask import Flask, request
+import anagramssolver
 
 app = Flask(__name__)
 
@@ -20,14 +21,17 @@ HOME_HTML = """
 def greet():
  base_word = request.args.get('base word', '')
  num_letters = request.args.get('number of letters', '')
- if base_word == '':  # if there was no base word given
-     base_word = 'Give a base word!'  # you gotta give a base word!
- if num_letters == '':
-     msg = 'You did not tell me your favorite food.'
- else:
-     msg = 'I like ' + num_letters + ', too.'
+ print(num_letters)
+ if base_word == '' or num_letters == '':  # if there was no base word given
+    base_word = 'Fill out all the info please!'  # you gotta give a base word!
+    result_set = 'Please try again!'
+    return GREET_HTML.format(base_word, result_set)
 
- return GREET_HTML.format(base_word, msg)
+ # run algo here put in base_word and num_letters
+ result_set = anagramssolver.main(base_word, num_letters)
+ print('result set: ' + str(result_set))
+ return GREET_HTML.format(base_word, result_set)
+
 
 GREET_HTML = """
  <html><body>
