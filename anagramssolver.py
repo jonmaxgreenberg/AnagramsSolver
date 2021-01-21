@@ -48,7 +48,7 @@ def find_anagrams(base_word, added_letters):
     
     # if this anagram is in all_words_frequencies then add to the result_set
     if key in all_words_frequencies:
-      result_set[letter] = all_words_frequencies[key]
+      result_set[added_letters] = all_words_frequencies[key]
 
 def anagram_steal(base_word, num_letters_to_add):
   alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']

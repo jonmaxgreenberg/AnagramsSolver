@@ -8,26 +8,8 @@ This file Preprocesses all the words in the english dictionary:
 import pandas as pd
 import collections
 import itertools
-import pprint
 import sys
 import pickle
-
-alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-two_letter_combos = []
-three_letter_combos = []
-pp = pprint.PrettyPrinter(indent=4)
-
-
-for letter in alphabet:
-  for letter2 in alphabet:
-    combo = letter + letter2
-    two_letter_combos.append(combo)
-
-for letter in alphabet:
-  for letter2 in alphabet:
-    for letter3 in alphabet:
-      combo = letter + letter2 + letter3
-      three_letter_combos.append(combo)
 
 # words originally from here: https://raw.githubusercontent.com/dwyl/english-words/master/words_alpha.txt
 
