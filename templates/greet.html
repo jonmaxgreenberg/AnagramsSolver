@@ -1,4 +1,15 @@
- <html><body>
-     <h2>Hello, {0}!</h2>
-     {1}
- </body></html>
+<html>
+
+<body>
+     <h2>The word {{ base_word }} can be stolen in these ways!</h2>
+     <table>
+	{% for key, value in answers.items() %}
+   <tr>
+        <th> {{ key }} </th>
+        <td> {{ value }} </td>
+   </tr>
+{% endfor %}
+</table>
+</body>
+
+</html>
