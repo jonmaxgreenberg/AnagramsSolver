@@ -64,7 +64,6 @@ def main(base_word, added_letters):
         result_set[added_letters] = all_words_frequencies[key]
 
   def anagram_steal(base_word, num_letters_to_add):
-    alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
     for letter in alphabet:
       find_anagrams(base_word, letter)
     

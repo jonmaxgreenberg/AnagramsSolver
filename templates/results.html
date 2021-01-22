@@ -1,12 +1,26 @@
 <html>
 <style>
-h2 {text-align: center;}
+mark.blue {
+    color:#0000A0;
+    background: none;
+}
+
+mark.red {
+    color:#ff0000;
+    background: none;
+}
+h1 {text-align: center;}
 p {text-align: center;}
 div {text-align: center;}
 
 </style>
 <body>
-     <h2>The word {{ base_word }} can be stolen in these ways!</h2>
+     <h1>The word <mark class="red"> {{ base_word }} </mark> can be stolen in these ways!</h1>
+     <p>
+		<form action="/">
+     <button type="submit">Solve for more anagrams!</button>
+      </form>
+     </p>
      <table>
 	{% for key, value in answers.items() %}
    <tr>
@@ -16,5 +30,4 @@ div {text-align: center;}
 {% endfor %}
 </table>
 </body>
-
 </html>
