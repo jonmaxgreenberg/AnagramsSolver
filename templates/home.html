@@ -52,7 +52,7 @@
       form {
       padding: 20px 20px;
       }
-      input[type=text], input[type=password] {
+      input[type=text], input[type=number] {
       width: calc(100% - 57px);
       height: 36px;
       margin: 13px 0 0 -5px;
@@ -104,7 +104,7 @@
     </div>
 <div>
         <label id="icon" for="name"><i class="fas fa-calculator"></i></label>
-        <input type="text" name="number of letters" id="number" placeholder="Number of letters to add" required/>
+        <input type="number" min="1" max="3" name="number of letters" id="number" placeholder="Number of letters to add" required/>
 </div>
         <div class="btn-block">
           <!-- <input type="button" value="Submit" onclick="showAnagrams()"></input> -->

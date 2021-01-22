@@ -12,10 +12,6 @@ def results():
  base_word = request.args.get('base word', '')
  num_letters = request.args.get('number of letters', '')
  print(num_letters)
- if base_word == '' or num_letters == '':  # if there was no base word given
-    base_word = 'Fill out all the info please!'  # you gotta give a base word!
-    result_set = 'Please try again!'
-    return render_template('results.html', base_word=base_word, answers=result_set)
 
  # run algo here put in base_word and num_letters
  result_set = anagramssolver.main(base_word, num_letters)
