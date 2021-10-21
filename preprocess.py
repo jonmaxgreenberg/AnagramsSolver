@@ -7,8 +7,6 @@ This file Preprocesses all the words in the english dictionary:
 '''
 import pandas as pd
 import collections
-import itertools
-import sys
 import pickle
 
 # words originally from here: https://raw.githubusercontent.com/dwyl/english-words/master/words_alpha.txt
